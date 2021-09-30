@@ -1,0 +1,84 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws-eventstream (1.2.0)
+    aws-partitions (1.506.0)
+    aws-sdk-core (3.121.1)
+      aws-eventstream (~> 1, >= 1.0.2)
+      aws-partitions (~> 1, >= 1.239.0)
+      aws-sigv4 (~> 1.1)
+      jmespath (~> 1.0)
+    aws-sdk-dynamodb (1.63.0)
+      aws-sdk-core (~> 3, >= 3.120.0)
+      aws-sigv4 (~> 1.1)
+    aws-sigv4 (1.4.0)
+      aws-eventstream (~> 1, >= 1.0.2)
+    google-protobuf (3.18.0-x86_64-linux)
+    jmespath (1.4.0)
+    multi_json (1.15.0)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    opentelemetry-api (1.0.0.rc3)
+    opentelemetry-common (0.19.1)
+      opentelemetry-api (~> 1.0.0.rc3)
+    opentelemetry-exporter-jaeger (0.20.0)
+      opentelemetry-api (~> 1.0.0.rc3)
+      opentelemetry-common (~> 0.19.1)
+      opentelemetry-sdk (~> 1.0.0.rc2)
+      thrift
+    opentelemetry-exporter-otlp (0.20.3)
+      google-protobuf (~> 3.7)
+      opentelemetry-api (~> 1.0.0.rc3)
+      opentelemetry-common (~> 0.19.1)
+      opentelemetry-sdk (~> 1.0.0.rc2)
+    opentelemetry-instrumentation-base (0.18.2)
+      opentelemetry-api (~> 1.0.0.rc3)
+    opentelemetry-instrumentation-net_http (0.19.1)
+      opentelemetry-api (~> 1.0.0.rc3)
+      opentelemetry-common (~> 0.19.1)
+      opentelemetry-instrumentation-base (~> 0.18.2)
+    opentelemetry-instrumentation-sinatra (0.19.1)
+      opentelemetry-api (~> 1.0.0.rc3)
+      opentelemetry-instrumentation-base (~> 0.18.2)
+    opentelemetry-sdk (1.0.0.rc3)
+      opentelemetry-api (~> 1.0.0.rc3)
+      opentelemetry-common (~> 0.19.1)
+      opentelemetry-instrumentation-base (~> 0.18.2)
+      opentelemetry-semantic_conventions
+    opentelemetry-semantic_conventions (1.6.0)
+      opentelemetry-api (~> 1.0.0.rc3)
+    rack (2.2.3)
+    rack-protection (2.1.0)
+      rack
+    ruby2_keywords (0.0.5)
+    sinatra (2.1.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.1.0)
+      tilt (~> 2.0)
+    sinatra-contrib (2.1.0)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.1.0)
+      sinatra (= 2.1.0)
+      tilt (~> 2.0)
+    thrift (0.15.0)
+    tilt (2.0.10)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  aws-sdk-dynamodb
+  opentelemetry-api
+  opentelemetry-common
+  opentelemetry-exporter-jaeger
+  opentelemetry-exporter-otlp
+  opentelemetry-instrumentation-net_http
+  opentelemetry-instrumentation-sinatra
+  opentelemetry-sdk
+  sinatra
+  sinatra-contrib
+
+BUNDLED WITH
+   2.2.27
