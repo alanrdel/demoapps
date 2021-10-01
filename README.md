@@ -16,11 +16,11 @@ We use a app created by Serverless - https://github.com/serverless/examples/tree
 ### Create a Api-Token with "Ingest Opentelemetry Trace" permission
 ![image](https://user-images.githubusercontent.com/54456808/135638886-0fe9b6e5-db45-4288-8675-792c905ca471.png)
 
-### Edit the below block with your dynatrace endpoint and api-token created before
+### Edit the below block with your dynatrace environment-id and api-token created before
 ```
-headers = Hash["Authorization" => "Api-Token xxxxxx.xxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"]
+headers = Hash["Authorization" => "Api-Token <your_api_token>"]
 dtOtel = OpenTelemetry::Exporter::OTLP::Exporter.new(
-            endpoint: 'https://xxxxxxxxx.live.dynatrace.com/api/v2/otlp/v1/traces',
+            endpoint: 'https://<your_environment_id>.live.dynatrace.com/api/v2/otlp/v1/traces',
             headers: headers
          )
 ```
